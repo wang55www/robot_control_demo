@@ -23,7 +23,7 @@ public:
     virtual char* get_result(char* sendMsg)=0;
     //----摄像头设备的方法定义------ end
 
-    Device_type get_device_type()
+    Device_ns::Device_type get_device_type()
     {
         return Device_type::CAMERA;
     }

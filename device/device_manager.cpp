@@ -48,18 +48,18 @@ Device_ns::Device* Device_ns::Device_manager::build_device(Device_ns::Device_typ
     Device_ns::Device* device_p=nullptr;
     if(device_type==Device_ns::Device_type::AGV)
     {
-        Oasis_agv agv(device_id);
-        device_p=&agv;
+        Oasis_agv* agv=new Oasis_agv(device_id);
+        device_p=agv;
     }
     else if(device_type == Device_ns::Device_type::ARM)
     {
-        Diana_arm arm(device_id);
-        device_p=&arm;
+        Diana_arm* arm=new Diana_arm(device_id);
+        device_p=arm;
     }
     else if(device_type == Device_ns::Device_type::CAMERA)
     {
-        XX_camera camera(device_id);
-        device_p=&camera;
+        XX_camera* camera=new XX_camera(device_id);
+        device_p=camera;
     }
     return device_p;
 }

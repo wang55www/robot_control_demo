@@ -40,6 +40,8 @@ file(GLOB_RECURSE EXT_SRC_DIR_LIST
     "${CMAKE_CURRENT_SOURCE_DIR}/device/*.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/common/*.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/common/*.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/*.h"
 )
 
 message(status " this is src = ${EXT_SRC_DIR_LIST}")
@@ -50,6 +52,8 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        lua_engine.h
+        lua_engine.cpp
         ${EXT_SRC_DIR_LIST}
         ${TS_FILES}
 )
@@ -76,3 +80,4 @@ endif()
 
 target_link_libraries(robot_control_demo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(robot_control_demo PRIVATE "/usr/local/Cellar/jsoncpp/1.9.5/lib/libjsoncpp.dylib")
+target_link_libraries(robot_control_demo PRIVATE "/usr/local/Cellar/lua@5.1/5.1.5_8/lib/liblua.5.1.5.dylib")

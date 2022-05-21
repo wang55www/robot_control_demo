@@ -31,7 +31,7 @@ public:
 
     //----agv设备的方法定义------ end
 
-    Device_type get_device_type()
+    Device_ns::Device_type get_device_type()
     {
         return Device_type::AGV;
     }

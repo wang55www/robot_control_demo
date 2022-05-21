@@ -48,7 +48,7 @@ class Device_ns::Device
          * @brief 获取设备类别
          * @return 设备类别枚举
          */
-        virtual Device_type get_device_type()=0;
+        virtual Device_ns::Device_type get_device_type()=0;
 
         ~Device();
 };
