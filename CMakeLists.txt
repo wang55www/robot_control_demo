@@ -27,6 +27,10 @@ set(CMAKE_PREFIX_PATH "/usr/local/Cellar/qt@5/5.15.2_1;/usr/local/Cellar/eigen/3
 #    endif()
 #endif()
 
+set(CONFIG_PATH "\"/Users/xiangnan.wxn/cppws/robot_control_demo/config/devices.json\"")
+
+configure_file(./config/DeviceConfig.h.in DeviceConfig.h)
+
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets LinguistTools REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets LinguistTools REQUIRED)
 find_package(Eigen3 REQUIRED)

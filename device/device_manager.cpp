@@ -7,7 +7,7 @@
 #include "impl/xx_camera.h"
 #include <typeinfo>
 
-#define DEVICE_SET_FILE "/Users/xiangnan.wxn/cppws/robot_control_demo/config/devices.json"
+#include "DeviceConfig.h"
 
 /**
  * @brief 初始化设备管理器

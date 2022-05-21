@@ -1,0 +1,1 @@
+#define DEVICE_SET_FILE @CONFIG_PATH@
